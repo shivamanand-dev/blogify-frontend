@@ -192,8 +192,9 @@ const HeartCanvas = () => {
   return (
     <StyledHeartCanvas>
       <canvas id="c" />
+      <div className="cover"></div>
     </StyledHeartCanvas>
-      );
+    );
 };
 
 export default HeartCanvas;
