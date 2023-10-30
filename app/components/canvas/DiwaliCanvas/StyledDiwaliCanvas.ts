@@ -6,173 +6,203 @@ export const StyledDiwaliCanvas = styled.section`
   width: 100vw;
   top: 0;
   z-index: -99999999;
-  .pouce-wrapper {
-    width: 450px;
-    height: 300px;
-    position: absolute;
-    display: flex;
-    justify-content: flex-start;
-    flex-flow: column;
-    overflow: hidden;
-    transform-origin: bottom;
-    z-index: 2;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .pouce-fountain {
-    flex: 80%;
-    position: relative;
-  }
-  .pouce {
-    flex: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-  .pouce-part {
-    width: 0;
-    height: 0;
-    border-left: 12px solid transparent;
-    border-right: 12px solid transparent;
-    border-bottom: 25px solid #270f82;
-    border-radius: 10px;
-    position: relative;
-    transform: scale(2);
-  }
-  .pouce-part:before,
-  .pouce-part:after {
-    content: "";
-    position: absolute;
-  }
-  .pouce-part:before {
-    width: 18px;
-    bottom: -25px;
-    transform: translate(-50%);
-    border-bottom: 6px solid #d46f6f;
-    border-left: 3px solid transparent;
-    border-right: 3px solid transparent;
-    left: 50%;
-  }
-  .pouce-part:after {
-    width: 0;
-    height: 0;
-    border-left: 3px solid transparent;
-    border-right: 3px solid transparent;
-    border-bottom: 7px solid #d46f6f;
-    left: 50%;
-    transform: translate(-50%);
-    top: 0;
-  }
-  .pouce-fountain > span {
-    display: block;
-    height: 77%;
-    position: absolute;
-    border-left: 1px dashed #db9801;
-    transform-origin: 50% 100%;
-    left: 50%;
-    transform: translate(var(--tranlation));
-    --tranlation: -50%;
-    bottom: 4px;
-    z-index: -1;
-    width: 24px;
-    border-radius: 50%;
-  }
-  .pouce-fountain > span,
-  .pouce-fountain > span::before {
-    animation: pouceAnimation 3s ease-in-out infinite alternate forwards;
-  }
-  .pouce-fountain > span:before {
-    content: "*";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    color: #db9801;
-    z-index: 222;
-    display: block;
-    right: -6px;
-    opacity: 0;
-  }
-  .pouce-fountain > span:nth-child(1) {
-    transform: translate(var(--translation, -50%))
-      rotate(var(--rotation, -110deg)) scale(var(--scaling, 1));
-  }
-  .pouce-fountain > span:nth-child(2) {
-    transform: translate(var(--translation, -50%))
-      rotate(var(--rotation, -800deg)) scale(var(--scaling, 1));
-  }
-  .pouce-fountain > span:nth-child(3) {
-    transform: translate(var(--translation, -50%))
-      rotate(var(--rotation, -45deg)) scale(var(--scaling, 1));
-  }
-  .pouce-fountain > span:nth-child(4) {
-    transform: translate(var(--translation, -50%))
-      rotate(var(--rotation, -0deg)) scale(var(--scaling, 1));
-  }
-  .pouce-fountain > span:nth-child(5) {
-    transform: translate(var(--translation, -50%))
-      rotate(var(--rotation, 45deg)) scale(var(--scaling, 1));
-  }
-  .pouce-fountain > span:nth-child(6) {
-    transform: translate(var(--translation, -50%))
-      rotate(var(--rotation, 80deg)) scale(var(--scaling, 1));
-  }
-  .pouce-fountain > span:nth-child(7) {
-    transform: translate(var(--translation, -50%))
-      rotate(var(--rotation, 110deg)) scale(var(--scaling, 1));
-  }
-  .pouce-fountain > span:nth-child(odd)::before {
-    top: 5px;
-  }
-  .pouce-fountain > span:nth-child(even)::before {
-    top: -10px;
-  }
-  .pouce-fountain::before {
-    content: "";
-    width: 13px;
-    height: 13px;
-    position: absolute;
-    left: 50%;
-    background: #4d4c54;
-    transform: translate(-50%);
-    bottom: -3px;
-    border-radius: 50%;
-  }
-  .pouce-fountain:after {
-    content: "*";
-    width: 10px;
-    height: 10px;
-    position: absolute;
-    left: 50%;
-    bottom: 3px;
-    transform: translate(-50%) rotate(0deg);
-    font-size: 1.8em;
-    display: flex;
-    justify-content: center;
-    border-radius: 50%;
-    color: #db9801;
-    animation: startAnimation 3s ease-in-out infinite forwards;
 
-    /* opacity: 0; */
+  .container {
+    height: 100vh;
+    width: 37.5em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
   }
-  @keyframes pouceAnimation {
-    0% {
-      height: 0%;
-      opacity: 0;
+  .wishes-container {
+    width: 28.12em;
+    height: 28.12em;
+    background: linear-gradient(
+        217deg,
+        rgba(255, 0, 0, 0.8),
+        rgba(255, 0, 0, 0) 70.71%
+      ),
+      linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+      linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: calc(50% - 5.25em);
+    left: calc(50% - 1.25em);
+    box-shadow: 0 0 3.43em rgba(14, 2, 40, 0.7);
+  }
+  .lights {
+    height: 1.25em;
+    width: 1.25em;
+    background-color: #432286;
+    border-radius: 50%;
+    position: absolute;
+  }
+  .lights-1 {
+    left: 13.43em;
+    top: 1.25em;
+    box-shadow: 0 24.37em #432286, 11.87em 11.87em #432286,
+      -11.87em 11.87em #432286;
+    animation: lights1 2s infinite;
+  }
+  @keyframes lights1 {
+    49% {
+      background-color: #432286;
+      box-shadow: 0 24.37em #432286, 11.87em 11.87em #432286,
+        -11.87em 11.87em #432286;
+    }
+    50% {
+      background-color: #f4c631;
+      box-shadow: 0 24.37em #f4c631, 11.87em 11.87em #f4c631,
+        -11.87em 11.87em #f4c631;
     }
     100% {
-      height: 77%;
-      opacity: 1;
+      background-color: #f4c631;
+      box-shadow: 0 24.37em #f4c631, 11.87em 11.87em #f4c631,
+        -11.87em 11.87em #f4c631;
     }
   }
-  @keyframes startAnimation {
-    0% {
-      opacity: 0;
+  .lights-2 {
+    left: 5.31em;
+    top: 5.31em;
+    box-shadow: 16.25em 0 #432286, 0 16.25em #432286, 16.25em 16.25em #432286;
+    animation: lights2 2s 1s infinite;
+  }
+  @keyframes lights2 {
+    49% {
+      background-color: #432286;
+      box-shadow: 16.25em 0 #432286, 0 16.25em #432286, 16.25em 16.25em #432286;
     }
-    25%,
+    50% {
+      background-color: #f4c631;
+      box-shadow: 16.25em 0 #f4c631, 0 16.25em #f4c631, 16.25em 16.25em #f4c631;
+    }
     100% {
-      opacity: 1;
+      background-color: #f4c631;
+      box-shadow: 16.25em 0 #f4c631, 0 16.25em #f4c631, 16.25em 16.25em #f4c631;
+    }
+  }
+  .wishes {
+    height: 100%;
+    width: 100%;
+    font-family: "Courgette", cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #ffffff;
+    font-size: 3.75em;
+    line-height: 1.6em;
+    animation: wishes 2s 3s forwards;
+    transform: scale(0);
+    transform-origin: 50% 50%;
+  }
+
+  @keyframes wishes {
+    100% {
+      transform: scale(1);
+    }
+  }
+  .diya-container {
+    height: 25em;
+    width: 25em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: calc(50% + 37.5em);
+    left: calc(50% + 9.37em);
+    animation: diya 3s forwards;
+  }
+  @keyframes diya {
+    100% {
+      top: calc(50% + 1.1em);
+    }
+  }
+  .diya {
+    height: 9.37em;
+    width: 18.75em;
+    background-color: #e53760;
+    border-radius: 0 0 9.37em 9.37em;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    box-shadow: 0 0 2.18em rgba(14, 2, 40, 0.4);
+  }
+  .inside {
+    width: 18.75em;
+    height: 3.75em;
+    background-color: #79182f;
+    border-radius: 50%;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 7.5em;
+  }
+
+  .flame {
+    height: 10.62em;
+    width: 10.62em;
+    background-color: #fdf1c2;
+    border-radius: 10em 0;
+    transform: rotate(-45deg);
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 2.25em;
+    animation: scale-up 2s infinite;
+  }
+  @keyframes scale-up {
+    50% {
+      transform: rotate(-45deg) scale(1.05);
+      bottom: 2.62em;
+    }
+  }
+  .flame:after {
+    content: "";
+    position: absolute;
+    height: 7.5em;
+    width: 7.5em;
+    background-color: #f4c631;
+    border-radius: 7.5em 0;
+    position: absolute;
+    bottom: 0;
+  }
+  .line-1,
+  .line-2 {
+    position: absolute;
+    height: 3.75em;
+    width: 20em;
+    border: none;
+    border-bottom: 0.5em solid #ffffff;
+    border-radius: 50%;
+    left: -0.62em;
+  }
+  .line-2 {
+    top: 3.75em;
+  }
+  .dots {
+    height: 3.75em;
+    width: 20em;
+    border: none;
+    border-bottom: 0.62em dotted #f4c631;
+    position: absolute;
+    border-radius: 50%;
+    top: 1.87em;
+    left: -0.62em;
+  }
+
+  .fab {
+    color: #ff0000;
+  }
+  @media screen and (max-width: 600px) {
+    .container {
+      font-size: 8.5px;
     }
   }
 `;
