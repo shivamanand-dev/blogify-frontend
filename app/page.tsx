@@ -1,9 +1,10 @@
-import HeartCanvas from "./components/HeartCanvas";
+import { DiwaliCanvas, HeartCanvas } from "./components/canvas";
 
 export default function Home() {
   return (
     <main>
-      <HeartCanvas />
+      {/* <HeartCanvas /> */}
+      <DiwaliCanvas />
       <h1>Hello World</h1>
     </main>
   );

@@ -1,9 +1,9 @@
 "use client";
 
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { StyledHeartCanvas } from "./StyledHeartCanvas";
 
-const HeartCanvas = () => {
+const HeartCanvas:React.FC = () => {
     useEffect(() => {
         const canvas = document.getElementById('c') as HTMLCanvasElement;
         const context = canvas.getContext('2d');
