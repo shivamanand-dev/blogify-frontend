@@ -72,7 +72,7 @@ const HeartCanvas:React.FC = () => {
               q: ~~(R() * v),
               D: i % 2 * 2 - 1,
               F: R() * 0.2 + 0.7,
-              f: `hsla(00, ${~~S}%, ${~~B}%, 0.1)`,
+              f: `hsla(00, ${3}%, ${~~B}%, 0.5)`,
             };
           }
     
@@ -99,7 +99,7 @@ const HeartCanvas:React.FC = () => {
         }
     
         setInterval(function () {
-          context.fillStyle = 'rgba(0, 0, 0, 0.2)';
+          context.fillStyle = 'rgba(255, 255, 255, 0.2)';
           context.fillRect(0, 0, O, Q);
     
           i = v;
